@@ -1,0 +1,33 @@
+# Port to run the server on
+port = 8080
+
+# Should TLS be enabled?
+secure = false
+
+# Path to your SSL certificate. Only needed if secure = true
+ssl_cert_path = ""
+
+# Path to your SSL certificate key. Only needed if secure = true 
+ssl_key_path = ""
+
+# Toggles development logging (more verbose)
+dev = false
+
+# List of allowed proxy addresses
+allowed_proxies = []
+
+# How strict should the rate limiter be? Allowed values: [strict, moderate, relaxed, off]
+# If rate limiter is turned off it's recommended to do rate limiting some other way
+rate_limiter_mode = "strict"
+
+# The amount of random characters to generate for a short url ID
+# Must be at least 2 and no more than 200
+url_id_size = 5
+
+# How often the server should check for expired fields to delete them from the database
+# (in seconds). Set to < 0 to disable cleanup entirely
+cleanup_interval = 60 
+
+# How long should the shortened URL be valid for (in minutes).
+# To disable URL expiry set cleanup_interval to < 0
+link_lifetime = 280
