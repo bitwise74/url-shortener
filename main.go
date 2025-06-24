@@ -31,9 +31,14 @@ func main() {
 	}
 
 	viper.BindEnv("port", "PORT")
+	viper.BindEnv("secure", "SECURE")
+	viper.BindEnv("ssl_cert_path", "SSL_CERT_PATH")
+	viper.BindEnv("ssl_key_path", "SSL_KEY_PATH")
 	viper.BindEnv("dev", "DEV")
 	viper.BindEnv("allowed_proxies", "ALLOWED_PROXIES")
 	viper.BindEnv("rate_limiter_mode", "RATE_LIMITER_MODE")
+	viper.BindEnv("url_id_size", "URL_ID_SIZE")
+	viper.BindEnv("cleanup_interval", "CLEANUP_INTERVAL")
 
 	// Validate some config options
 	if p := viper.GetString("port"); p == "" {

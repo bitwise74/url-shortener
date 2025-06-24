@@ -1,0 +1,19 @@
+services:
+  url-shortener:
+    image: bitwise/url-shortener:latest
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      # Make sure this is the same as the ports you expose
+      - PORT=8080
+      - SECURE=false
+      - SSL_CERT_PATH=
+      - SSL_KEY_PATH=
+      - DEV=false
+      - ALLOWED_PROXIES=
+      - RATE_LIMITER_MODE=strict
+      - URL_ID_SIZE=5
+      - CLEANUP_INTERVAL=60
+      - LINK_LIFETIME=280
+    restart: unless-stopped

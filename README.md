@@ -33,6 +33,11 @@ Start the server:
 
 By default, the server runs on `localhost:8080`.
 
+### Docker
+
+To run this service with docker rename the `docker-compose.example` file into `docker-compose.yml` and edit it to your liking. Then run `docker-compose up`
+> (you can add `-d` to detach the image from your terminal and run it in the background)
+
 ### API Endpoints
 
 - **POST /shorten**  
